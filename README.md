@@ -1,19 +1,13 @@
-# 🎈 Blank app template
-
-A simple Streamlit app template for you to modify!
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+import streamlit as st
+ 
+st.title("😻My chatbot app")
+st.write(
+    "Hello! This is my chatbot app"
+)
+# Create a text input field
+user_input = st.text_input("You:",placeholder="Type your message")
+ 
+# Display the input back to the user
+if user_input:
+    st.write(f"User Input: {user_input}")
+#Initialize session state for storing chat history
